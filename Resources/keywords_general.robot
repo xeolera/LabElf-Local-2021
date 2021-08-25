@@ -8,9 +8,16 @@ ${URL_HOMEPAGE}                 https://stag.labelf.ai/main/34/datasets/view
 ${URL_TITLE}				    Labelf
 ${URL_USERNAME_STEFAN}          stefan_nikolic@hotmail.com
 ${URL_PASSWORD_STEFAN}          iths123
+
+${CARDNAME_1}                   Stefan Nikolic
+${CARDNAME_1}                   Greve Drakula
+${CARDNAME_1}                   Tommy Skärgård
+
+#Test Cards for Billing-tests
 ${TEST_CARD_1_VISA}             4242424242424242
 ${TEST_CARD_2_VISA_DEBIT}       000056655665556
 ${TEST_CARD_3_MASTERCARD}       5555555555554444
+
 
 #Pay in mind -> CVC Any 3 digit && Any future date works!
 
@@ -40,8 +47,8 @@ Login_Password
     Input Text                          id:password     ${search_term}
 
 Login-Session
-    Login_Email                         ${URL_USERNAME}
-    Login_Password                      ${URL_PASSWORD}
+    Login_Email                         ${URL_USERNAME_STEFAN}
+    Login_Password                      ${URL_PASSWORD_STEFAN}
     Click Element                       xpath://*[@id="app"]/div/main/div/div/div/div/div/div[2]/button/div
 
 Verify Page Loaded

@@ -28,20 +28,26 @@ Verify Card_Panel_Opens
 #Input Interactions Here
 Input Card Name
     [Arguments]                                  ${search_term}
-    Click Element                                xpath: //*[contains(text(), "CARD NAME")]
-    Input Text                                   xpath: //*[contains(text(), "CARD NAME")]     ${search_term}
+    Set Selenium Speed                           1
+    Click Element                                xpath://*[@id="payment-form"]/form/div/div/div[1]/div/input
+    Input Text                                   xpath://*[@id="payment-form"]/form/div/div/div[1]/div/input            ${search_term}
 
 Input Card Number
     [Arguments]                                  ${search_term}
-    Click Element                                class:CardNumberField-input-wrapper
-    Input Text                                   class:CardNumberField-input-wrapper            ${search_term}
+    Click Element                                name:cardnumber
+    Input Text                                   name:cardnumber           ${search_term}
 
 Input MM/YY
     [Arguments]                                  ${search_term}
-    Click Element                                class:CardNumberField-input-wrapper
-    Input Text                                   class:CardNumberField-input-wrapper            ${search_term}
+    Click Element                                xpath://*[@id="root"]/form/div/div[2]/span[2]
+    Input Text                                   xpath://*[@id="root"]/form/div/div[2]/span[2]                          ${search_term}
 
-#Refactorisation
+Input CVC
+    [Arguments]                                  ${search_term}
+    Click Element                                xpath://*[@id="root"]/form/div/div[2]/span[3]/span/span/input
+    Input Text                                   xpath://*[@id="root"]/form/div/div[2]/span[3]/span/span/input          ${search_term}
+
+#Refactorisation - Feel free to combine keywords - Make Sure to Make Understandable Refactorisations
 Navigate to Billing Page && Verify Page Loaded
     Click MainMenu
     Click MainMenu_Billing
@@ -50,4 +56,10 @@ Navigate to Billing Page && Verify Page Loaded
 Open Card Panel && Verify Panel Loaded
     Click Card_Panel
     Verify Card_Panel_Opens
+
+Input Card Name, Number, MM/YY And CVC As TestObject 1
+    Input Card Name                 ${CARDNAME_1}
+    Input Card Number               ${TESTCARD_1_VISA}
+    Input MM/YY                     0322
+    Input CVC                       123
 
