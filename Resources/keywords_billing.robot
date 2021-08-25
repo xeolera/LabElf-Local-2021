@@ -7,6 +7,7 @@
 
 #Insert Click Interactions Here
 Click MainMenu
+    Set Selenium Speed                           1
     Click Element                                xpath://*[@id="app"]/div[5]/div[1]/nav/div/div[4]/div/button/div
 
 Click MainMenu_Billing
@@ -28,7 +29,6 @@ Verify Card_Panel_Opens
 #Input Interactions Here
 Input Card Name
     [Arguments]                                  ${search_term}
-    Set Selenium Speed                           1
     Click Element                                xpath://*[@id="payment-form"]/form/div/div/div[1]/div/input
     Input Text                                   xpath://*[@id="payment-form"]/form/div/div/div[1]/div/input            ${search_term}
 
