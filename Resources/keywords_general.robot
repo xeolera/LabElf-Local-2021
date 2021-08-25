@@ -2,7 +2,6 @@
 
 *** Variables ***
 
-
 ${BROWSER}                      chrome
 ${URL_LOGIN}                    https://stag.labelf.ai/login
 ${URL_HOMEPAGE}                 https://stag.labelf.ai/main/34/datasets/view

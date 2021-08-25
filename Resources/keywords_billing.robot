@@ -18,7 +18,6 @@ Click Card_Panel
 #Insert Verify Pages Here
 
 Verify Billing Page Loaded
-    Set Selenium Speed                           1
     Wait Until Page Contains Element             xpath://*[@id="app"]/div[6]/div[1]/main/div/div/div[2]/div/div/div/div/div[2]/div[1]/div/div[1]/h3
     Page Should Contain                          Billing information
 
@@ -33,14 +32,14 @@ Input Card Name
     Input Text                                   xpath: //*[contains(text(), "CARD NAME")]     ${search_term}
 
 Input Card Number
-    [Arguments]                                 ${search_term}
-    Click Element                               class:CardNumberField-input-wrapper
-    Input Text                                  class:CardNumberField-input-wrapper            ${search_term}
+    [Arguments]                                  ${search_term}
+    Click Element                                class:CardNumberField-input-wrapper
+    Input Text                                   class:CardNumberField-input-wrapper            ${search_term}
 
 Input MM/YY
-    [Arguments]                                 ${search_term}
-    Click Element                               class:CardNumberField-input-wrapper
-    Input Text                                  class:CardNumberField-input-wrapper            ${search_term}
+    [Arguments]                                  ${search_term}
+    Click Element                                class:CardNumberField-input-wrapper
+    Input Text                                   class:CardNumberField-input-wrapper            ${search_term}
 
 #Refactorisation
 Navigate to Billing Page && Verify Page Loaded
