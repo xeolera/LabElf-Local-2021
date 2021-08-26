@@ -21,7 +21,6 @@ ${TEST_CARD_3_MASTERCARD}       5555555555554444
 
 #Pay in mind -> CVC Any 3 digit && Any future date works!
 
-
 *** Keywords ***
 Begin Web Test
     Open browser                        about:blank             ${BROWSER}
@@ -54,8 +53,8 @@ Login-Session
 Verify Page Loaded
     ${LINK_TEXT}                        Get Title
     Should Be Equal                     ${LINK_TEXT}      Labelf
-    Wait Until Page Contains Element    xpath://*[@id="app"]/div[5]/div[1]/nav/div/div[1]
-    Page Should Contain                 Labelf
+    Wait until page contains			Welcome! Please add some data
+    Page Should Contain                 It looks like you do not have any datasets in here.
 
 End Web Test
     Close Browser
